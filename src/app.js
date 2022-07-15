@@ -4,6 +4,7 @@ const hbs = require("hbs")
 const getGeoCode = require("./utils/geocode")
 const getForacast = require("./utils/forecast")
 
+const port = process.env.PORT || 3000
 // create an express app
 const app = express()
 
@@ -77,6 +78,6 @@ app.get("*", (req,res) => {
 })
 
 // starting the express server on the specified port
-app.listen(5000, () => {
+app.listen(port, () => {
     console.log("App is running!")
 })

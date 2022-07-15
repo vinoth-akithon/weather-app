@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
     // }
     messageOne.textContent = "Loading...";
     messageTwo.textContent = "";
-    fetch(`http://127.0.0.1:5000/weather?address=${inputLocation}`).then((response) => {
+    fetch(`/weather?address=${inputLocation}`).then((response) => {
         response.json().then((data) => {
             messageOne.textContent = data.location;
             messageTwo.textContent = data.message;
